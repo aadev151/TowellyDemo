@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Towelly Demo</title>
+    <style>
+        .subtitle {
+            font-size: 22px
+        }
+        .input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                
+                <img style="width: 200px; margin-left: auto; margin-right: auto;" src="https://lirp.cdn-website.com/d1cc114b/dms3rep/multi/opt/siteicon-1920w.png">
+                <h1 class="title">White City Hotels</h1>
+                <h2 class="subtitle" id="welcome">Welcome to White City Hotels! Please, enter the number of guests below</h2>
+
+                <br>
+
+                <div id="form1">
+                    <input class="input is-normal is-success" type="number" value="1">
+                    <br>
+                    <br>
+                    <br>
+                    <input class="button is-normal is-success" type="submit" onclick="formSubmit()">
+                </div>
+
+                <img style="width: 300px; margin-left: auto; margin-right: auto;" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=White City Hotels" id="qr" hidden>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function formSubmit() {
+            document.getElementById('form1').hidden = true
+            document.getElementById('qr').hidden = false
+            document.getElementById('welcome').innerHTML = "Thank you! Here is your QR-code for getting towels"
+
+        }
+
+    </script>
+
+</body>
+</html>
